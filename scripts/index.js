@@ -8,7 +8,7 @@ function displayCategories(categories) {
     for (let cat of categories) {
         const categoryDiv = document.createElement('div');
         categoryDiv.innerHTML = `
-      <button class="btn btn-sm  hover:bg-[#FF1F3D] hover:text-white"> ${cat.category}</button>
+      <button id="btn-${cat.category_id}" onclick="loadCategoryVideos(${cat.category_id})" class="btn btn-sm  hover:bg-[#FF1F3D] hover:text-white"> ${cat.category}</button>
       `;
         categoriesContainer.appendChild(categoryDiv);
     }
